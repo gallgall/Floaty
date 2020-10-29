@@ -358,6 +358,9 @@ open class Floaty: UIView {
     animationGroup.notify(queue: .main) {
       self.fabDelegate?.floatyDidOpen?(self)
     }
+    
+    circleLayer.backgroundColor = self.buttonColor.cgColor
+    
     fabDelegate?.floatyOpened?(self)
     closed = false
   }
@@ -407,6 +410,9 @@ open class Floaty: UIView {
     animationGroup.notify(queue: .main) {
       self.fabDelegate?.floatyDidClose?(self)
     }
+    
+    circleLayer.backgroundColor = self.buttonColor.cgColor
+    
     fabDelegate?.floatyClosed?(self)
     closed = true
   }
